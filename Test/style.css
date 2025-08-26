@@ -1,0 +1,207 @@
+:root {
+    --bg-color: #0d0d12;
+    --primary-color: #2c3e50;
+    --secondary-color: #00e699;
+    --accent-color: #ff3366;
+    --text-color: #e0e0e0;
+    --light-text-color: #f5f5f5;
+    --box-shadow: 0 0 20px rgba(0, 230, 153, 0.2);
+    --border-radius: 8px;
+    --paper-bg: #1a1a20;
+    --hover-glow: 0 0 15px var(--secondary-color);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Bebas+Neue&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+    background: var(--bg-color);
+    line-height: 1.6;
+    background-image: radial-gradient(circle, rgba(26, 26, 32, 0.5) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    background: linear-gradient(180deg, rgba(26, 26, 32, 0.8) 0%, rgba(13, 13, 18, 0.8) 100%);
+    backdrop-filter: blur(10px);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 4rem 0 2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    box-shadow: 0 0 30px rgba(0, 230, 153, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.name {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: var(--secondary-color);
+    animation: text-pop-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color);
+}
+
+main section {
+    padding: 4rem 0;
+}
+
+.about-section {
+    background: var(--paper-bg);
+    border-radius: var(--border-radius);
+    margin-top: -3rem;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    transform: perspective(1000px) rotateX(2deg);
+    transition: transform 0.5s ease;
+}
+
+.about-section:hover {
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+.about-section h2 {
+    text-align: left;
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px rgba(0, 230, 153, 0.5);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #c0c0c0;
+}
+
+.research-section, .teaching-talks-section {
+    background: transparent;
+}
+
+.paper-list, .list-item {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.paper {
+    background: var(--paper-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 230, 153, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paper:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--hover-glow);
+}
+
+.paper-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    text-shadow: 0 0 8px rgba(0, 230, 153, 0.5);
+}
+
+.paper-details a, .note a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.paper-details a:hover, .note a:hover {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+
+footer {
+    background: #08080b;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--secondary-color);
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes text-pop-up {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+        text-shadow: none;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 0 0 10px var(--secondary-color);
+    }
+}
