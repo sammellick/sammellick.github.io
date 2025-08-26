@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sam Mellick | Academic Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8a2be2;
+            --secondary: #00b4d8;
+            --accent: #f72585;
+            --dark: #121212;
+            --darker: #0a0a0a;
+            --light: #f8f9fa;
+            --gray: #2d2d2d;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, var(--darker), var(--dark));
+            z-index: -1;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 30px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--light);
+            font-weight: 400;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #ccc;
+            max-width: 600px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6);
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 30px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray);
+            color: var(--light);
+            margin-right: 15px;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        
+        .about-skills {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .skill {
+            margin-bottom: 20px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background-color: var(--gray);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            position: relative;
+            width: 0;
+            transition: width 1s ease;
+        }
+        
+        /* Research Section */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .research-card {
+            background: var(--darker);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .research-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.2);
+        }
+        
+        .research-img {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .research-img i {
+            font-size: 4rem;
+            color: white;
+            opacity: 0.7;
+        }
+        
+        .research-content {
+            padding: 20px;
+        }
+        
+        .research-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+        
+        .research-content p {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Publications */
+        .publications-list {
+            list-style: none;
+        }
+        
+        .publication-item {
+            background: var(--darker);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .publication-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .publication-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+        
+        .publication-meta {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
+        .publication-meta span {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .publication-meta i {
+            margin-right: 5px;
+            color: var(--primary);
+        }
+        
+        .publication-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .publication-links a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #ccc;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background: var(--darker);
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+            color: var(--light);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--darker);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero-text, .hero-image {
+                flex: 100%;
+                text-align: center;
+                padding-right: 0;
+            }
+            
+            .hero-text {
+                margin-bottom: 50px;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .about-text, .about-skills {
+                flex: 100%;
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .contact-info, .contact-form {
+                flex: 100%;
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Sam<span>Mellick</span></a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Dr. Sam Mellick</h1>
+                <h2>Research Scientist & Academic</h2>
+                <p>Exploring the intersection of technology, data science, and human behavior to solve complex problems and advance knowledge.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-google-scholar"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Dr. Sam Mellick">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Background & Expertise</h3>
+                    <p>Hello! I'm Dr. Sam Mellick, a research scientist and academic with a passion for data-driven discovery and innovation. With a background in computational science and interdisciplinary research, I strive to push the boundaries of knowledge and make meaningful contributions to my field.</p>
+                    <p>My work combines rigorous quantitative methods with creative problem-solving to address complex challenges. I'm particularly interested in the applications of machine learning and data science to social and behavioral phenomena.</p>
+                    <p>When I'm not researching or teaching, you can find me hiking, reading science fiction, or experimenting with new programming languages and frameworks.</p>
+                </div>
+                <div class="about-skills">
+                    <h3>Skills & Expertise</h3>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <span>Data Analysis</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <span>Machine Learning</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <span>Statistical Modeling</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <span>Python/R Programming</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="92"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <div class="section-title">
+                <h2>Research Areas</h2>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-img">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="research-content">
+                        <h3>Cognitive Computing</h3>
+                        <p>Exploring how computational models can simulate human thought processes and improve decision-making systems.</p>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="research-content">
+                        <h3>Data Visualization</h3>
+                        <p>Developing innovative approaches to represent complex data in intuitive and meaningful ways.</p>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-img">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="research-content">
+                        <h3>Network Analysis</h3>
+                        <p>Studying complex systems through network theory to understand patterns and relationships in large datasets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent Publications</h2>
+            </div>
+            <ul class="publications-list">
+                <li class="publication-item">
+                    <h3>Deep Learning Approaches to Behavioral Pattern Recognition</h3>
+                    <div class="publication-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                        <span><i class="fas fa-book"></i> Journal of Computational Science</span>
+                    </div>
+                    <p>This study explores novel deep learning architectures for identifying complex behavioral patterns in large-scale social data.</p>
+                    <div class="publication-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
+                        <a href="#"><i class="fas fa-download"></i> Download PDF</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <h3>Network Dynamics in Digital Social Environments</h3>
+                    <div class="publication-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                        <span><i class="fas fa-book"></i> Social Networks Journal</span>
+                    </div>
+                    <p>An analysis of how digital social networks evolve over time and the implications for information diffusion.</p>
+                    <div class="publication-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
+                        <a href="#"><i class="fas fa-download"></i> Download PDF</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <h3>Ethical Considerations in Algorithmic Decision-Making</h3>
+                    <div class="publication-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2021</span>
+                        <span><i class="fas fa-book"></i> Ethics in Technology Review</span>
+                    </div>
+                    <p>Examining the ethical implications of automated decision systems and proposing frameworks for responsible implementation.</p>
+                    <div class="publication-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
+                        <a href="#"><i class="fas fa-download"></i> Download PDF</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> sam.mellick@example.edu</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Department of Data Science, University of Technology, City, State</p>
+                    <p><i class="fas fa-clock"></i> Available for meetings: Mon-Wed 2-4pm</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Sam<span>Mellick</span></div>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <p class="copyright">© 2023 Dr. Sam Mellick. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu toggle functionality
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animate skill bars when they come into view
+        function animateSkillBars() {
+            const skillLevels = document.querySelectorAll('.skill-level');
+            
+            skillLevels.forEach(skill => {
+                const level = skill.getAttribute('data-level');
+                skill.style.width = level + '%';
+            });
+        }
+        
+        // Initialize animations when page loads
+        window.addEventListener('load', function() {
+            animateSkillBars();
+        });
+    </script>
+</body>
+</html>
