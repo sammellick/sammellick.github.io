@@ -25,9 +25,18 @@
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.svg" alt="cowboy emoji" width="10%" height="10%"/></span>
 						<h1>I'm Sam Mellick.</h1>
-    The people say I'm a: <p id="randomText"></p>
+    <h2 id="randomIntro"></h2> <p id="randomText"></p>
 					</header>
 
+    <script>
+        const intros = [
+            "Someone once called me a",
+			"I was once labelled a",
+        ];
+
+        const randomIndex = Math.floor(Math.random() * intros.length);
+        document.getElementById('randomText').innerText = intros[randomIndex];
+    </script>
     <script>
         const texts = [
             "Flâneur.",
@@ -51,7 +60,7 @@
         ];
 
         const randomIndex = Math.floor(Math.random() * texts.length);
-        document.getElementById('randomText').innerText = texts[randomIndex];
+        document.getElementById('randomIntro').innerText = texts[randomIndex];
     </script>
 				
 				<!-- Nav 
@@ -191,6 +200,7 @@ Recently I cotaught <a href="https://indico.math.cnrs.fr/event/12324/">a minicou
 	</body>
 
 </html>
+
 
 
 
