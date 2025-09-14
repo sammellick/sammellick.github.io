@@ -32,7 +32,7 @@
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
-var N = getRandomInt(2);
+var N = getRandomInt(3);
 
 const intros = [
       "Someone once called me a",
@@ -58,8 +58,13 @@ const Nintros = [
 			"Typically introduced at conferences as an",
 			"But you can call me an",
         ];
+const oneOffs = [
+      "Available in all colours",
+		"Garth Marengi's Darkplace enthusiast",
+        ];
 const randomIndexIntros = Math.floor(Math.random() * intros.length);
 const randomIndexNIntros = Math.floor(Math.random() * Nintros.length);
+const randomIndexoneOffs = Math.floor(Math.random() * oneOffs.length);
 
         const texts = [
       "flâneur.",
@@ -96,8 +101,11 @@ const randomIndexNIntros = Math.floor(Math.random() * Nintros.length);
         const randomIndexNTexts = Math.floor(Math.random() * Ntexts.length);
 if (N == "0") {
  message = intros[randomIndexIntros].concat(" ",texts[randomIndexTexts]); // Try edit me
-} else {
+} else if {
  message = Nintros[randomIndexNIntros].concat(" ",Ntexts[randomIndexNTexts]); // Try edit me
+}
+else {
+ message = oneOffs[randomIndexoneOffs];
 }
 document.getElementById('randomIntro').innerText = message;
 
@@ -270,6 +278,7 @@ Recently I cotaught <a href="https://indico.math.cnrs.fr/event/12324/">a minicou
 	</body>
 
 </html>
+
 
 
 
