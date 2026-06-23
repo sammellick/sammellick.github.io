@@ -27,13 +27,12 @@
 						<h1>I'm Sam Mellick.</h1>
     <h2 id="randomIntro"></h2>
 					</header>
-
-    <script>
+<script>
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
-var N = getRandomInt(3);
 
+// --- YOUR ARRAYS GO HERE ---
 const intros = [
       "Someone once called me a",
 			"I was once labelled a",
@@ -69,6 +68,49 @@ const Nintros = [
 			"The Oxford English Dictionary defines me as an",
 			"My Wikipedia page summarises me as an",
 			"When the schoolkids see me in the street, they holler that I'm an",
+        ];
+        const texts = [
+      "flâneur.",
+			"man about town(s).",
+			"theoremmonger.",
+			"fool, aloof.",
+			"fellow of infinite jest, of most excellent fancy.",
+			"cost minus one calculator (it's zero).",
+			"proofsmith.",
+			"property (T) teaser.",
+			"wannabe west coast coin flipper.",
+			"wannabe east coast dice roller",
+			"sigmer(sic) algebra sayer.",
+			"point process obsessive.",
+			"rather odd vagabond.",
+			"raconteur.",
+			"more of a 'nah yeah' than a 'yeah nah'",
+			"ne'er-do-well",
+			"troublesome ruffian",
+			"gout-riddled guttersnipe",
+			"peddler of unverified conjectures",
+			"certified poster",
+			"spectre haunting Europe",
+			"purveyor of trivial cases",
+			"drongo with Hagoromo",
+			"departmental larrikin",
+        ];
+ const Ntexts = [
+      "inestimable quantity.",
+      "\\epsilon wrangler, \\Upsilon mangler.",
+			"invariant random colourer.",
+	 	  "antipodean mathematician.",
+	 	"existing individual.",
+	 	"eleven state markov chain.",
+	 	"overly wrought bloke.",
+	 	"octonion enjoyer.",
+	 	"avaricious villain.",
+	 	"open book.",
+	 	"optimistic pessimist.",
+		"olde towne coin flipper.",
+	 	"inimitable ingrate",
+	 	"unvarnished polisher",
+	 	"absolute galah"
         ];
 const oneOffs = [
       "Available in all colours.",
@@ -121,76 +163,45 @@ const oneOffs = [
 		"The fairest of dinkums",
 		"Singer of strange songs",
         ];
-const randomIndexIntros = Math.floor(Math.random() * intros.length);
-const randomIndexNIntros = Math.floor(Math.random() * Nintros.length);
-const randomIndexoneOffs = Math.floor(Math.random() * oneOffs.length);
 
-        const texts = [
-      "flâneur.",
-			"man about town(s).",
-			"theoremmonger.",
-			"fool, aloof.",
-			"fellow of infinite jest, of most excellent fancy.",
-			"cost minus one calculator (it's zero).",
-			"proofsmith.",
-			"property (T) teaser.",
-			"wannabe west coast coin flipper.",
-			"wannabe east coast dice roller",
-			"sigmer(sic) algebra sayer.",
-			"point process obsessive.",
-			"rather odd vagabond.",
-			"raconteur.",
-			"more of a 'nah yeah' than a 'yeah nah'",
-			"ne'er-do-well",
-			"troublesome ruffian",
-			"gout-riddled guttersnipe",
-			"peddler of unverified conjectures",
-			"certified poster",
-			"spectre haunting Europe",
-			"purveyor of trivial cases",
-			"drongo with Hagoromo",
-			"departmental larrikin",
-        ];
- const Ntexts = [
-      "inestimable quantity.",
-      "\\epsilon wrangler, \\Upsilon mangler.",
-			"invariant random colourer.",
-	 	  "antipodean mathematician.",
-	 	"existing individual.",
-	 	"eleven state markov chain.",
-	 	"overly wrought bloke.",
-	 	"octonion enjoyer.",
-	 	"avaricious villain.",
-	 	"open book.",
-	 	"optimistic pessimist.",
-		"olde towne coin flipper.",
-	 	"inimitable ingrate",
-	 	"unvarnished polisher",
-	 	"absolute galah"
-        ];
-        const randomIndexTexts = Math.floor(Math.random() * texts.length);
-        const randomIndexNTexts = Math.floor(Math.random() * Ntexts.length);
-if (N == "0") {
- message = intros[randomIndexIntros].concat(" ",texts[randomIndexTexts]); // Try edit me
-} else if (N == "1") {
- message = Nintros[randomIndexNIntros].concat(" ",Ntexts[randomIndexNTexts]); // Try edit me
+// --- WEIGHTED SAMPLING LOGIC ---
+
+// 1. Calculate the exact weight of each path
+const weightA = intros.length * texts.length;
+const weightAn = Nintros.length * Ntexts.length;
+const weightOneOffs = oneOffs.length;
+
+// 2. Calculate the total pool size
+const totalWeight = weightA + weightAn + weightOneOffs;
+
+// 3. Roll a single random number between 0 and totalWeight - 1
+const roll = getRandomInt(totalWeight);
+
+let message = "";
+
+// 4. Route the roll to the correct path
+if (roll < weightA) {
+    // We landed in Path 0
+    const randomIntro = intros[getRandomInt(intros.length)];
+    const randomText = texts[getRandomInt(texts.length)];
+    message = randomIntro + " " + randomText;
+
+} else if (roll < weightA + weightAn) {
+    // We landed in Path 1
+    const randomNintro = Nintros[getRandomInt(Nintros.length)];
+    const randomNtext = Ntexts[getRandomInt(Ntexts.length)];
+    message = randomNintro + " " + randomNtext;
+
+} else {
+    // We landed in Path 2
+    message = oneOffs[getRandomInt(oneOffs.length)];
 }
-else {
- message = oneOffs[randomIndexoneOffs];
-}
+
 document.getElementById('randomIntro').innerText = message;
 console.log("If you are reading this, you're probably a real sicko.");
-    </script>
-				
-				<!-- Nav 
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">First Section</a></li>
-							<li><a href="#second">Second Section</a></li>
-							<li><a href="#cta">Get Started</a></li>
-						</ul>
-					</nav>
+
+</script>
+
 -->
 				<!-- Main -->
 					<div id="main">
