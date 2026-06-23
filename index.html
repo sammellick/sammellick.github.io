@@ -28,181 +28,181 @@
     <h2 id="randomIntro"></h2>
 					</header>
 <script>
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
 
-// --- YOUR ARRAYS GO HERE ---
-const intros = [
-      "Someone once called me a",
-			"I was once labelled a",
-			"On TikTok they call me a",
-			"The man in the street knows me as a",
-			"My mum calls me a",
-			"The New York Times referred to me as a",
-			"The Gen Zed kids know me as a",
-			"Recorded in the annals of history as a",
-			"Typically introduced at conferences as a",
-			"But you can call me a",
-			"On IRC they used to call me a",
-			"Put out an APB for a",
-			"Wanted, dead or alive: a",
-			"The Oxford English Dictionary defines me as a",
-			"My Wikipedia page summarises me as a",
-			"When the schoolkids see me in the street, they holler that I'm a",
-        ];
-const Nintros = [
-      "Someone once called me an",
-			"I was once labelled an",
-			"On TikTok they call me an",
-			"The man in the street knows me as an",
-			"My mum calls me an",
-			"The New York Times referred to me as an",
-			"The Gen Zed kids know me as an",
-			"Recorded in the annals of history as an",
-			"Typically introduced at conferences as an",
-			"But you can call me an",
-			"On IRC they used to call me an",
-			"Put out an APB for an",
-			"Wanted, dead or alive: an",
-			"The Oxford English Dictionary defines me as an",
-			"My Wikipedia page summarises me as an",
-			"When the schoolkids see me in the street, they holler that I'm an",
-        ];
-        const texts = [
-      "flâneur.",
-			"man about town(s).",
-			"theoremmonger.",
-			"fool, aloof.",
-			"fellow of infinite jest, of most excellent fancy.",
-			"cost minus one calculator (it's zero).",
-			"proofsmith.",
-			"property (T) teaser.",
-			"wannabe west coast coin flipper.",
-			"wannabe east coast dice roller",
-			"sigmer(sic) algebra sayer.",
-			"point process obsessive.",
-			"rather odd vagabond.",
-			"raconteur.",
-			"more of a 'nah yeah' than a 'yeah nah'",
-			"ne'er-do-well",
-			"troublesome ruffian",
-			"gout-riddled guttersnipe",
-			"peddler of unverified conjectures",
-			"certified poster",
-			"spectre haunting Europe",
-			"purveyor of trivial cases",
-			"drongo with Hagoromo",
-			"departmental larrikin",
-        ];
- const Ntexts = [
-      "inestimable quantity.",
-      "\\epsilon wrangler, \\Upsilon mangler.",
-			"invariant random colourer.",
-	 	  "antipodean mathematician.",
-	 	"existing individual.",
-	 	"eleven state markov chain.",
-	 	"overly wrought bloke.",
-	 	"octonion enjoyer.",
-	 	"avaricious villain.",
-	 	"open book.",
-	 	"optimistic pessimist.",
-		"olde towne coin flipper.",
-	 	"inimitable ingrate",
-	 	"unvarnished polisher",
-	 	"absolute galah"
-        ];
-const oneOffs = [
-      "Available in all colours.",
-		"Garth Marengi's Darkplace enthusiast.",
-		"Kierkegaard quoter.",
-		"What has been will be again, what has been done will be done again; there is nothing new under the sun.",
-		"Tomorrow, and tomorrow, and tomorrow, creeps in this petty pace from day to day to the last syllable of recorded time.",
-		"Two gin-scented tears trickled down the sides of his nose.",
-		"Black soul choir singer.",
-		"Did you ever listen to Dopesmoker by Sleep?",
-		"Proceeds the mathematician. Nazareth.",
-		"Fond of cunning stunts.",
-		"Hark! The angels stay singing in the dark, like the rainbow in the Ronnie James Dio joint.",
-		"I guess I got my swagger back.",
-		"I keep it juicy-juicy.",
-		"Have proof. Will travel.",
-		"Love is a way of feeling.",
-		"I say the glass is twice as big as it ought to be.",
-		"What ARE birds? We just don't know.",
-		"Digital style.",
-		"Keats and Yeats are on your side.",
-		"As Sauer said to the Baders, as he opened a crate of ale. Oh I say: some groups are more (T) than others",
-		"Just a bad penny.",
-		"There's kerosene around, something to do.",
-		"(Vroom vroom) Beep-beep, so let's ride",
-		"I Write Proofs Not Tragedies.",
-		"Welcome to the house of fun.",
-		"I'm at the combination Pizza Hut and Taco Bell",
-		"There Is A Light And It Never Goes Out",
-		"I've come to wish you an unhappy birthday.",
-		"Stop me if you think that you've heard this one before.",
-		"They say that the world was built for two.",
-		"Gouge away.",
-		"And what rough beast, its hour come round at last, slouches towards Bethlehem to be born?",
-		"'Twas brillig, and the slithy toves / Did gyre and gimble in the wabe",
-		"Beware the Jabberwock, my son! The jaws that bite, the claws that catch!",
-		"Windmill, windmill for the land / Turn forever, hand in hand",
-		"Money is calling -- do you pick up?",
-		"I'm not a mountainman, I'm a mountain, man.",
-		"Ah ! ça ira, ça ira, ça ira.",
-		"Sure, I might offend a few of the bluenoses with my cocky stride and musky odors - oh, I'll never be the darling of the so-called 'City Fathers' who cluck their tongues, stroke their beards, and talk about 'What's to be done with this Sam Mellick?",
-		"Just remember, \\uppercase when you spell the man name",
-		"Look on my Preprints, ye Mighty, and despair!",
-		"We are all in the gutter, but some of us are looking at the C*-algebras",
-		"I'm not saying it's a martingale, but I'm not not saying it",
-		"4-manifolds, Jeremy? Four? That's insane.",
-		"Born to prove, forced to referee",
-		"Assuming the Riemann hypothesis out of sheer boredom,",
-		"I saw the worst minds of my generation buoyed by sanity, satiated sane well-dressed",
-		"The fairest of dinkums",
-		"Singer of strange songs",
-        ];
+    // --- YOUR ARRAYS GO HERE ---
+    const intros = [
+          "Someone once called me a",
+          "I was once labelled a",
+          "On TikTok they call me a",
+          "The man in the street knows me as a",
+          "My mum calls me a",
+          "The New York Times referred to me as a",
+          "The Gen Zed kids know me as a",
+          "Recorded in the annals of history as a",
+          "Typically introduced at conferences as a",
+          "But you can call me a",
+          "On IRC they used to call me a",
+          "Put out an APB for a",
+          "Wanted, dead or alive: a",
+          "The Oxford English Dictionary defines me as a",
+          "My Wikipedia page summarises me as a",
+          "When the schoolkids see me in the street, they holler that I'm a",
+    ];
+    
+    const Nintros = [
+          "Someone once called me an",
+          "I was once labelled an",
+          "On TikTok they call me an",
+          "The man in the street knows me as an",
+          "My mum calls me an",
+          "The New York Times referred to me as an",
+          "The Gen Zed kids know me as an",
+          "Recorded in the annals of history as an",
+          "Typically introduced at conferences as an",
+          "But you can call me an",
+          "On IRC they used to call me an",
+          "Put out an APB for an",
+          "Wanted, dead or alive: an",
+          "The Oxford English Dictionary defines me as an",
+          "My Wikipedia page summarises me as an",
+          "When the schoolkids see me in the street, they holler that I'm an",
+    ];
+    
+    const texts = [
+          "flâneur.",
+          "man about town(s).",
+          "theoremmonger.",
+          "fool, aloof.",
+          "fellow of infinite jest, of most excellent fancy.",
+          "cost minus one calculator (it's zero).",
+          "proofsmith.",
+          "property (T) teaser.",
+          "wannabe west coast coin flipper.",
+          "wannabe east coast dice roller",
+          "sigmer(sic) algebra sayer.",
+          "point process obsessive.",
+          "rather odd vagabond.",
+          "raconteur.",
+          "more of a 'nah yeah' than a 'yeah nah'",
+          "ne'er-do-well",
+          "troublesome ruffian",
+          "gout-riddled guttersnipe",
+          "peddler of unverified conjectures",
+          "certified poster",
+          "spectre haunting Europe",
+          "purveyor of trivial cases",
+          "drongo with Hagoromo",
+          "departmental larrikin",
+    ];
+    
+    const Ntexts = [
+          "inestimable quantity.",
+          "\\epsilon wrangler, \\Upsilon mangler.",
+          "invariant random colourer.",
+          "antipodean mathematician.",
+          "existing individual.",
+          "eleven state markov chain.",
+          "overly wrought bloke.",
+          "octonion enjoyer.",
+          "avaricious villain.",
+          "open book.",
+          "optimistic pessimist.",
+          "olde towne coin flipper.",
+          "inimitable ingrate",
+          "unvarnished polisher",
+          "absolute galah"
+    ];
+    
+    const oneOffs = [
+          "Available in all colours.",
+          "Garth Marengi's Darkplace enthusiast.",
+          "Kierkegaard quoter.",
+          "What has been will be again, what has been done will be done again; there is nothing new under the sun.",
+          "Tomorrow, and tomorrow, and tomorrow, creeps in this petty pace from day to day to the last syllable of recorded time.",
+          "Two gin-scented tears trickled down the sides of his nose.",
+          "Black soul choir singer.",
+          "Did you ever listen to Dopesmoker by Sleep?",
+          "Proceeds the mathematician. Nazareth.",
+          "Fond of cunning stunts.",
+          "Hark! The angels stay singing in the dark, like the rainbow in the Ronnie James Dio joint.",
+          "I guess I got my swagger back.",
+          "I keep it juicy-juicy.",
+          "Have proof. Will travel.",
+          "Love is a way of feeling.",
+          "I say the glass is twice as big as it ought to be.",
+          "What ARE birds? We just don't know.",
+          "Digital style.",
+          "Keats and Yeats are on your side.",
+          "As Sauer said to the Baders, as he opened a crate of ale. Oh I say: some groups are more (T) than others",
+          "Just a bad penny.",
+          "There's kerosene around, something to do.",
+          "(Vroom vroom) Beep-beep, so let's ride",
+          "I Write Proofs Not Tragedies.",
+          "Welcome to the house of fun.",
+          "I'm at the combination Pizza Hut and Taco Bell",
+          "There Is A Light And It Never Goes Out",
+          "I've come to wish you an unhappy birthday.",
+          "Stop me if you think that you've heard this one before.",
+          "They say that the world was built for two.",
+          "Gouge away.",
+          "And what rough beast, its hour come round at last, slouches towards Bethlehem to be born?",
+          "'Twas brillig, and the slithy toves / Did gyre and gimble in the wabe",
+          "Beware the Jabberwock, my son! The jaws that bite, the claws that catch!",
+          "Windmill, windmill for the land / Turn forever, hand in hand",
+          "Money is calling -- do you pick up?",
+          "I'm not a mountainman, I'm a mountain, man.",
+          "Ah ! ça ira, ça ira, ça ira.",
+          "Sure, I might offend a few of the bluenoses with my cocky stride and musky odors - oh, I'll never be the darling of the so-called 'City Fathers' who cluck their tongues, stroke their beards, and talk about 'What's to be done with this Sam Mellick?",
+          "Just remember, \\uppercase when you spell the man name",
+          "Look on my Preprints, ye Mighty, and despair!",
+          "We are all in the gutter, but some of us are looking at the C*-algebras",
+          "I'm not saying it's a martingale, but I'm not not saying it",
+          "4-manifolds, Jeremy? Four? That's insane.",
+          "Born to prove, forced to referee",
+          "Assuming the Riemann hypothesis out of sheer boredom,",
+          "I saw the worst minds of my generation buoyed by sanity, satiated sane well-dressed",
+          "The fairest of dinkums",
+          "Singer of strange songs",
+    ];
 
-// --- WEIGHTED SAMPLING LOGIC ---
+    // --- 50/50 WEIGHTED SAMPLING LOGIC ---
+    let message = "";
 
-// 1. Calculate the exact weight of each path
-const weightA = intros.length * texts.length;
-const weightAn = Nintros.length * Ntexts.length;
-const weightOneOffs = oneOffs.length;
+    // 1. Flip a coin (0 or 1)
+    const isOneOff = getRandomInt(2) === 1;
 
-// 2. Calculate the total pool size
-const totalWeight = weightA + weightAn + weightOneOffs;
+    if (isOneOff) {
+        // 50% chance: Pick a uniform random one-off
+        message = oneOffs[getRandomInt(oneOffs.length)];
+    } else {
+        // 50% chance: Pick uniformly from the constructed sentences
+        const weightA = intros.length * texts.length;
+        const weightAn = Nintros.length * Ntexts.length;
+        const totalConstructedWeight = weightA + weightAn;
 
-// 3. Roll a single random number between 0 and totalWeight - 1
-const roll = getRandomInt(totalWeight);
+        // Roll a number to pick exactly one constructed combination
+        const roll = getRandomInt(totalConstructedWeight);
 
-let message = "";
+        if (roll < weightA) {
+            // We landed in Path 0 ("A")
+            const randomIntro = intros[getRandomInt(intros.length)];
+            const randomText = texts[getRandomInt(texts.length)];
+            message = randomIntro + " " + randomText;
+        } else {
+            // We landed in Path 1 ("An")
+            const randomNintro = Nintros[getRandomInt(Nintros.length)];
+            const randomNtext = Ntexts[getRandomInt(Ntexts.length)];
+            message = randomNintro + " " + randomNtext;
+        }
+    }
 
-// 4. Route the roll to the correct path
-if (roll < weightA) {
-    // We landed in Path 0
-    const randomIntro = intros[getRandomInt(intros.length)];
-    const randomText = texts[getRandomInt(texts.length)];
-    message = randomIntro + " " + randomText;
+    document.getElementById('randomIntro').innerText = message;
+    console.log("If you are reading this, you're probably a real sicko.");
 
-} else if (roll < weightA + weightAn) {
-    // We landed in Path 1
-    const randomNintro = Nintros[getRandomInt(Nintros.length)];
-    const randomNtext = Ntexts[getRandomInt(Ntexts.length)];
-    message = randomNintro + " " + randomNtext;
-
-} else {
-    // We landed in Path 2
-    message = oneOffs[getRandomInt(oneOffs.length)];
-}
-
-document.getElementById('randomIntro').innerText = message;
-console.log("If you are reading this, you're probably a real sicko.");
-
-</script>
-
--->
+    </script>
 				<!-- Main -->
 					<div id="main">
 
