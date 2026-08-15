@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>G'day. It's Sam Mellick.</title>
+		<link rel="icon" type="image/x-icon" href="images/logo.svg">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Sam Mellick, Samuel Mellick, math, maths, mathematician, McGill, ENS, Lyon, UJ, Jagiellonian">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Zero-md script for rendering markdown -->
+		<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="cowboy emoji" width="10%" height="10%"/></span>
+						<h1>I'm Sam Mellick.</h1>
+						<h2 id="randomIntro"></h2>
+					</header>
+<script>
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    // --- YOUR ARRAYS GO HERE ---
+    const intros = [
+          "Someone once called me a", "I was once labelled a", "On TikTok they call me a",
+          "The man in the street knows me as a", "My mum calls me a", "The New York Times referred to me as a",
+          "The Gen Zed kids know me as a", "Recorded in the annals of history as a",
+          "Typically introduced at conferences as a", "But you can call me a", "On IRC they used to call me a",
+          "Put out an APB for a", "Wanted, dead or alive: a", "The Oxford English Dictionary defines me as a",
+          "My Wikipedia page summarises me as a", "When the schoolkids see me in the street, they holler that I'm a",
+		  "On certain obscure subreddits, they refer to me as a",
+    ];
+    
+    const Nintros = [
+          "Someone once called me an", "I was once labelled an", "On TikTok they call me an",
+          "The man in the street knows me as an", "My mum calls me an", "The New York Times referred to me as an",
+          "The Gen Zed kids know me as an", "Recorded in the annals of history as an",
+          "Typically introduced at conferences as an", "But you can call me an", "On IRC they used to call me an",
+          "Put out an APB for an", "Wanted, dead or alive: an", "The Oxford English Dictionary defines me as an",
+          "My Wikipedia page summarises me as an", "When the schoolkids see me in the street, they holler that I'm an",
+		  "On certain obscure subreddits, they refer to me as an",
+    ];
+    
+    const texts = [
+          "flâneur.", "man about town(s).", "theoremmonger.", "fool, aloof.",
+          "fellow of infinite jest, of most excellent fancy.", "cost minus one calculator (it's zero).",
+          "proofsmith.", "property (T) teaser.", "wannabe west coast coin flipper.",
+          "wannabe east coast dice roller", "sigmer(sic) algebra sayer.", "point process obsessive.",
+          "rather odd vagabond.", "raconteur.", "more of a 'nah yeah' than a 'yeah nah'",
+          "ne'er-do-well", "troublesome ruffian", "gout-riddled guttersnipe",
+          "peddler of unverified conjectures", "certified poster", "spectre haunting Europe",
+          "purveyor of trivial cases", "drongo with Hagoromo", "departmental larrikin",
+		  "pesky gadfly", "nonergodic process", "the fairest of dinkums",
+		  "silhouette lifter, bent bewildered, big dipper", "contemplator of the immortality of the crab",
+		  "nothing but a one-armed bandit", "alpinal ape", "simulable simian",
+		  "prestigious prestidigitator", "clandestine cartographer",
+    ];
+    
+    const Ntexts = [
+          "inestimable quantity.", "\\epsilon wrangler, \\Upsilon mangler.", "invariant random colourer.",
+          "antipodean mathematician.", "existing individual.", "eleven state markov chain.",
+          "overly wrought bloke.", "octonion enjoyer.", "avaricious villain.",
+          "open book.", "optimistic pessimist.", "olde towne coin flipper.",
+          "inimitable ingrate", "unvarnished polisher", "absolute galah", "ineffable ignoramus",
+    ];
+    
+    const oneOffs = [
+          "Available in all colours.", "Garth Marengi's Darkplace enthusiast.", "Kierkegaard quoter.",
+          "What has been will be again, what has been done will be done again; there is nothing new under the sun.",
+          "Tomorrow, and tomorrow, and tomorrow, creeps in this petty pace from day to day to the last syllable of recorded time.",
+          "Two gin-scented tears trickled down the sides of his nose.", "Black soul choir singer.",
+          "Did you ever listen to Dopesmoker by Sleep?", "Proceeds the mathematician. Nazareth.",
+          "Fond of cunning stunts.", "Hark! The angels stay singing in the dark, like the rainbow in the Ronnie James Dio joint.",
+          "I guess I got my swagger back.", "I keep it juicy-juicy.", "Have proof. Will travel.",
+          "Love is a way of feeling.", "I say the glass is twice as big as it ought to be.",
+          "What ARE birds? We just don't know.", "Digital style.", "Keats and Yeats are on your side.",
+          "As Sauer said to the Baders, as he opened a crate of ale. Oh I say: some groups are more (T) than others",
+          "Just a bad penny.", "There's kerosene around, something to do.", "(Vroom vroom) Beep-beep, so let's ride",
+          "I Write Proofs Not Tragedies.", "Welcome to the house of fun.", "I'm at the combination Pizza Hut and Taco Bell",
+          "There Is A Light And It Never Goes Out", "I've come to wish you an unhappy birthday.",
+          "Stop me if you think that you've heard this one before.", "They say that the world was built for two.",
+          "Gouge away.", "And what rough beast, its hour come round at last, slouches towards Bethlehem to be born?",
+          "'Twas brillig, and the slithy toves / Did gyre and gimble in the wabe",
+          "Beware the Jabberwock, my son! The jaws that bite, the claws that catch!",
+          "Windmill, windmill for the land / Turn forever, hand in hand", "Money is calling -- do you pick up?",
+          "I'm not a mountainman, I'm a mountain, man.", "Ah ! ça ira, ça ira, ça ira.",
+          "Sure, I might offend a few of the bluenoses with my cocky stride and musky odors - oh, I'll never be the darling of the so-called 'City Fathers' who cluck their tongues, stroke their beards, and talk about 'What's to be done with this Sam Mellick?",
+          "Just remember, \\uppercase when you spell the man name", "Look on my Preprints, ye Mighty, and despair!",
+          "We are all in the gutter, but some of us are looking at the C*-algebras",
+          "I'm not saying it's a martingale, but I'm not not saying it", "4-manifolds, Jeremy? Four? That's insane.",
+          "Born to prove, forced to referee", "Assuming the Riemann hypothesis out of sheer boredom,",
+          "I saw the worst minds of my generation buoyed by sanity, satiated sane well-dressed",
+          "Singer of strange songs", "Behold! A man!", "One that loved not wisely but too well",
+          "I am not what I am", "They call me the midnight barber", "It's", "Inevitably, irrevocably...",
+          "It's a long, long way to Tipperary.", "At the going down of the sun, and in the morning...",
+          "I believe in Bouldy, and Bouldy believes in me.", "On GP.",
+          "By the pricking of my thumbs, something wicked this way comes...", "Angle perpendicular to everything",
+          "Curse these metal hands!", "Give it to me straight, like a pear cider that's made from 100% pears.",
+          "We're all heavily versed in esoteric wisdom and lore", "I don't accessorise. I'm Sam Mellick. There's a simple truth to me.",
+          "Prince with a thousand enemies.", "Big L, rest in peace.", "Da Mystery of Chessboxin'",
+          "Women hold up half the sky.", "Can I get a 'Soo'?", "I was running through the six with my woes.",
+          "The type of fella who be respectin' others in ya elevator", "No such thing as half way provers by contradiction",
+          "Tiger style.", "Why pamper life's complexity when the leather runs smooth on the passenger seat?",
+          "Left and right, keep it moving", "Break and/or protect ya neck", "This charming and/or charmless man",
+          "Cherry wooden nickels on his specs for the ferryman", "I want more life", "A world lit only by FIREs",
+          "The sun is a deadly laser", "Push and release", "The sun sets forever over Blackwater Park",
+          "Eternal recurrence", "Currently dismantling the master's house with the master's tools",
+          "Recharging the void.", "A different kind of cool.", "The 'S' is for Sucks",
+          "Styles upon styles.", "Eat Pray Thug.", "Too many cooks.",
+    ];
+
+    // --- 50/50 WEIGHTED SAMPLING LOGIC ---
+    let message = "";
+
+    // 1. Flip a coin (0 or 1)
+    const isOneOff = getRandomInt(2) === 1;
+
+    if (isOneOff) {
+        // 50% chance: Pick a uniform random one-off
+        message = oneOffs[getRandomInt(oneOffs.length)];
+    } else {
+        // 50% chance: Pick uniformly from the constructed sentences
+        const weightA = intros.length * texts.length;
+        const weightAn = Nintros.length * Ntexts.length;
+        const totalConstructedWeight = weightA + weightAn;
+
+        // Roll a number to pick exactly one constructed combination
+        const roll = getRandomInt(totalConstructedWeight);
+
+        if (roll < weightA) {
+            // We landed in Path 0 ("A")
+            const randomIntro = intros[getRandomInt(intros.length)];
+            const randomText = texts[getRandomInt(texts.length)];
+            message = randomIntro + " " + randomText;
+        } else {
+            // We landed in Path 1 ("An")
+            const randomNintro = Nintros[getRandomInt(Nintros.length)];
+            const randomNtext = Ntexts[getRandomInt(Ntexts.length)];
+            message = randomNintro + " " + randomNtext;
+        }
+    }
+
+    document.getElementById('randomIntro').innerText = message;
+    console.log("If you are reading this, you're probably a real sicko.");
+
+    </script>
+				<!-- Main Content Area -->
+					<div id="main">
+						<section class="main">
+							<div class="content">
+                                <!-- The 'no-shadow' tag ensures your existing CSS applies directly to the markdown -->
+								<zero-md src="content.md" no-shadow></zero-md>
+							</div>
+						</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer> 
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
