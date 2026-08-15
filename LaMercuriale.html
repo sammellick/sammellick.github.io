@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercuriale - Group Properties</title>
+<style>
+    :root {
+        --ink-color: #1a1614;
+        --paper-bg: #e6dfca;
+        --border-color: #1a1614;
+        --red-ink: #9b2c2c;
+        --blue-ink: #2c449b;
+    }
+
+    body {
+        background-color: var(--paper-bg);
+        /* Subtle paper texture using multiple radial gradients */
+        background-image: 
+            radial-gradient(circle at 10% 20%, #dbcbad 0%, transparent 5%),
+            radial-gradient(circle at 80% 90%, #dbcbad 0%, transparent 10%);
+        font-family: 'Georgia', 'Times New Roman', serif;
+        color: var(--ink-color);
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .mercuriale-container {
+        background: #f2ebda;
+        padding: 40px 50px;
+        box-shadow: 
+            0 10px 25px rgba(0,0,0,0.15), 
+            inset 0 0 60px rgba(150, 110, 60, 0.1);
+        max-width: 950px;
+        width: 100%;
+        border: 1px solid #c7bca1;
+        position: relative;
+        border-radius: 3px;
+        /* Distressed edges effect */
+        clip-path: polygon(
+            0% 2px, 2px 0%, 98% 1px, 100% 3px, 99.5% 98%, 98% 100%, 2px 99.5%, 0% 98%
+        );
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 24pt;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 14pt;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-weight: normal;
+        border-bottom: 3px double var(--border-color);
+        padding-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid var(--border-color);
+    }
+
+    th, td {
+        border: 1px solid var(--border-color);
+        padding: 12px 15px;
+        font-size: 14pt;
+    }
+
+    th {
+        text-align: center;
+        background-color: rgba(200, 185, 155, 0.15);
+        font-weight: bold;
+        line-height: 1.3;
+    }
+
+    .th-subtext {
+        font-size: 10pt;
+        font-weight: normal;
+        display: block;
+        margin-top: 4px;
+    }
+
+    td.group-name {
+        text-align: left;
+        position: relative;
+        width: 50%;
+    }
+
+    /* Imitating the dotted leaders from the image */
+    td.group-name::after {
+        content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        color: #555;
+        opacity: 0.6;
+        letter-spacing: 3px;
+        padding-left: 8px;
+    }
+
+    .group-text {
+        background: #f2ebda;
+        position: relative;
+        z-index: 1;
+        padding-right: 5px;
+    }
+
+    td.numeric {
+        text-align: center;
+        width: 25%;
+        position: relative;
+    }
+
+    .math {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+    }
+
+    /* Hand-written notations imitating the image */
+    .handwriting-red {
+        position: absolute;
+        font-family: 'Caveat', 'Brush Script MT', cursive;
+        color: var(--red-ink);
+        font-size: 14pt;
+        transform: rotate(-5deg);
+        opacity: 0.85;
+    }
+
+    .handwriting-blue {
+        position: absolute;
+        font-family: 'Caveat', 'Brush Script MT', cursive;
+        color: var(--blue-ink);
+        font-size: 14pt;
+        transform: rotate(3deg);
+        opacity: 0.85;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="mercuriale-container">
+        <h1>Mercuriales des Marchés Mathématiques</h1>
+        <h2>Registre des Groupes et Invariants &mdash; Automne 1923</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        GROUP
+                        <span class="th-subtext">(INDEXATION)</span>
+                    </th>
+                    <th>
+                        COST
+                    </th>
+                    <th>
+                        FIRST <span class="math">L&sup2;</span> BETTI NUMBER
+                        <span class="th-subtext">(<span class="math">b&#8321;&#8317;&sup2;&#8318;</span>)</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="group-name"><span class="group-text">Free Group (<span class="math">F&#8322;</span>)</span></td>
+                    <td class="numeric">
+                        2
+                        <span class="handwriting-red" style="top: 5px; right: 10px;">verified</span>
+                    </td>
+                    <td class="numeric">1</td>
+                </tr>
+                <tr>
+                    <td class="group-name"><span class="group-text">Free Abelian Group (<span class="math">&#8484;&#8322;</span>)</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">0</td>
+                </tr>
+                <tr>
+                    <td class="group-name"><span class="group-text">Surface Group (<span class="math">&Sigma;&#8322;</span>)</span></td>
+                    <td class="numeric">3</td>
+                    <td class="numeric">
+                        2
+                        <span class="handwriting-blue" style="bottom: 5px; right: 20px;">exact</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="group-name"><span class="group-text">Thompson's Group (<span class="math">F</span>)</span></td>
+                    <td class="numeric">
+                        1
+                        <span class="handwriting-red" style="top: 15px; left: 15px;">?</span>
+                    </td>
+                    <td class="numeric">0</td>
+                </tr>
+                <tr>
+                    <td class="group-name"><span class="group-text">Baumslag-Solitar Group (<span class="math">BS(1, 2)</span>)</span></td>
+                    <td class="numeric">1</td>
+                    <td class="numeric">0</td>
+                </tr>
+                <tr>
+                    <td class="group-name"><span class="group-text">Finitely Generated Infinite Group</span></td>
+                    <td class="numeric">&gt; 1</td>
+                    <td class="numeric">
+                        &ge; 0
+                        <span class="handwriting-red" style="bottom: 2px; right: 5px;">bound</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
