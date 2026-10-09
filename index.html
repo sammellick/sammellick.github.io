@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE HTML>
 <!--
 	Stellar by HTML5 UP
@@ -482,3 +483,489 @@ Recently I cotaught <a href="https://indico.math.cnrs.fr/event/12324/">a minicou
 
 
 
+=======
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>你好。 It's Sam Mellick.</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.svg">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Sam Mellick, Samuel Mellick, math, maths, mathematician, McGill, ENS, Lyon, UJ, Jagiellonian">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="cowboy emoji" width="10%" height="10%"/></span>
+						<h1>I'm Sam Mellick.</h1>
+    <h2 id="randomIntro"></h2>
+					</header>
+<script>
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    // --- YOUR ARRAYS GO HERE ---
+    const intros = [
+          "Someone once called me a",
+          "I was once labelled a",
+          "On TikTok they call me a",
+          "The man in the street knows me as a",
+          "My mum calls me a",
+          "The New York Times referred to me as a",
+          "The Gen Zed kids know me as a",
+          "Recorded in the annals of history as a",
+          "Typically introduced at conferences as a",
+          "But you can call me a",
+          "On IRC they used to call me a",
+          "Put out an APB for a",
+          "Wanted, dead or alive: a",
+          "The Oxford English Dictionary defines me as a",
+          "My Wikipedia page summarises me as a",
+          "When the schoolkids see me in the street, they holler that I'm a",
+		  "On certain obscure subreddits, they refer to me as a",
+    ];
+    
+    const Nintros = [
+          "Someone once called me an",
+          "I was once labelled an",
+          "On TikTok they call me an",
+          "The man in the street knows me as an",
+          "My mum calls me an",
+          "The New York Times referred to me as an",
+          "The Gen Zed kids know me as an",
+          "Recorded in the annals of history as an",
+          "Typically introduced at conferences as an",
+          "But you can call me an",
+          "On IRC they used to call me an",
+          "Put out an APB for an",
+          "Wanted, dead or alive: an",
+          "The Oxford English Dictionary defines me as an",
+          "My Wikipedia page summarises me as an",
+          "When the schoolkids see me in the street, they holler that I'm an",
+		  "On certain obscure subreddits, they refer to me as an",
+    ];
+    
+    const texts = [
+          "flâneur.",
+          "man about town(s).",
+          "theoremmonger.",
+          "fool, aloof.",
+          "fellow of infinite jest, of most excellent fancy.",
+          "cost minus one calculator (it's zero).",
+          "proofsmith.",
+          "property (T) teaser.",
+          "wannabe west coast coin flipper.",
+          "wannabe east coast dice roller",
+          "sigmer(sic) algebra sayer.",
+          "point process obsessive.",
+          "rather odd vagabond.",
+          "raconteur.",
+          "more of a 'nah yeah' than a 'yeah nah'",
+          "ne'er-do-well",
+          "troublesome ruffian",
+          "gout-riddled guttersnipe",
+          "peddler of unverified conjectures",
+          "certified poster",
+          "spectre haunting Europe",
+          "purveyor of trivial cases",
+          "drongo with Hagoromo",
+          "departmental larrikin",
+		  "pesky gadfly",
+		  "nonergodic process",
+		  "the fairest of dinkums",
+		  "silhouette lifter, bent bewildered, big dipper",
+		  "contemplator of the immortality of the crab",
+		  "nothing but a one-armed bandit",
+		  "alpinal ape",
+		  "simulable simian",
+		  "prestigious prestidigitator",
+		  "clandestine cartographer",
+    ];
+    
+    const Ntexts = [
+          "inestimable quantity.",
+          "\\epsilon wrangler, \\Upsilon mangler.",
+          "invariant random colourer.",
+          "antipodean mathematician.",
+          "existing individual.",
+          "eleven state markov chain.",
+          "overly wrought bloke.",
+          "octonion enjoyer.",
+          "avaricious villain.",
+          "open book.",
+          "optimistic pessimist.",
+          "olde towne coin flipper.",
+          "inimitable ingrate",
+          "unvarnished polisher",
+          "absolute galah",
+		  "ineffable ignoramus",
+    ];
+    
+    const oneOffs = [
+          "Available in all colours.",
+          "Garth Marengi's Darkplace enthusiast.",
+          "Kierkegaard quoter.",
+          "What has been will be again, what has been done will be done again; there is nothing new under the sun.",
+          "Tomorrow, and tomorrow, and tomorrow, creeps in this petty pace from day to day to the last syllable of recorded time.",
+          "Two gin-scented tears trickled down the sides of his nose.",
+          "Black soul choir singer.",
+          "Did you ever listen to Dopesmoker by Sleep?",
+          "Proceeds the mathematician. Nazareth.",
+          "Fond of cunning stunts.",
+          "Hark! The angels stay singing in the dark, like the rainbow in the Ronnie James Dio joint.",
+          "I guess I got my swagger back.",
+          "I keep it juicy-juicy.",
+          "Have proof. Will travel.",
+          "Love is a way of feeling.",
+          "I say the glass is twice as big as it ought to be.",
+          "What ARE birds? We just don't know.",
+          "Digital style.",
+          "Keats and Yeats are on your side.",
+          "As Sauer said to the Baders, as he opened a crate of ale. Oh I say: some groups are more (T) than others",
+          "Just a bad penny.",
+          "There's kerosene around, something to do.",
+          "(Vroom vroom) Beep-beep, so let's ride",
+          "I Write Proofs Not Tragedies.",
+          "Welcome to the house of fun.",
+          "I'm at the combination Pizza Hut and Taco Bell",
+          "There Is A Light And It Never Goes Out",
+          "I've come to wish you an unhappy birthday.",
+          "Stop me if you think that you've heard this one before.",
+          "They say that the world was built for two.",
+          "Gouge away.",
+          "And what rough beast, its hour come round at last, slouches towards Bethlehem to be born?",
+          "'Twas brillig, and the slithy toves / Did gyre and gimble in the wabe",
+          "Beware the Jabberwock, my son! The jaws that bite, the claws that catch!",
+          "Windmill, windmill for the land / Turn forever, hand in hand",
+          "Money is calling -- do you pick up?",
+          "I'm not a mountainman, I'm a mountain, man.",
+          "Ah ! ça ira, ça ira, ça ira.",
+          "Sure, I might offend a few of the bluenoses with my cocky stride and musky odors - oh, I'll never be the darling of the so-called 'City Fathers' who cluck their tongues, stroke their beards, and talk about 'What's to be done with this Sam Mellick?",
+          "Just remember, \\uppercase when you spell the man name",
+          "Look on my Preprints, ye Mighty, and despair!",
+          "We are all in the gutter, but some of us are looking at the C*-algebras",
+          "I'm not saying it's a martingale, but I'm not not saying it",
+          "4-manifolds, Jeremy? Four? That's insane.",
+          "Born to prove, forced to referee",
+          "Assuming the Riemann hypothesis out of sheer boredom,",
+          "I saw the worst minds of my generation buoyed by sanity, satiated sane well-dressed",
+          "Singer of strange songs",
+		  "Behold! A man!",
+		  "One that loved not wisely but too well",
+		  "I am not what I am",
+		  "They call me the midnight barber",
+		  "It's",
+		  "Inevitably, irrevocably...",
+		  "It's a long, long way to Tipperary.",
+		  "At the going down of the sun, and in the morning...",
+		  "I believe in Bouldy, and Bouldy believes in me.",
+		  "On GP.",
+		  "By the pricking of my thumbs, something wicked this way comes...",
+		  "Angle perpendicular to everything",
+		  "Curse these metal hands!",
+		  "Give it to me straight, like a pear cider that's made from 100% pears.",
+		  "We're all heavily versed in esoteric wisdom and lore",
+		  "I don't accessorise. I'm Sam Mellick. There's a simple truth to me.",
+		  "Prince with a thousand enemies.",
+		  "Big L, rest in peace.",
+		  "Da Mystery of Chessboxin'",
+		  "Women hold up half the sky.",
+		  "Can I get a 'Soo'?",
+		  "I was running through the six with my woes.",
+		  "The type of fella who be respectin' others in ya elevator",
+		  "No such thing as half way provers by contradiction",
+		  "Tiger style.",
+		  "Why pamper life's complexity when the leather runs smooth on the passenger seat?",
+		  "Left and right, keep it moving",
+		  "Break and/or protect ya neck",
+		  "This charming and/or charmless man",
+		  "Cherry wooden nickels on his specs for the ferryman",
+		  "I want more life",
+		  "A world lit only by FIREs",
+		  "The sun is a deadly laser",
+		  "Push and release",
+		  "The sun sets forever over Blackwater Park",
+		  "Eternal recurrence",
+		  "Currently dismantling the master's house with the master's tools",
+		  "Recharging the void.",
+		  "A different kind of cool.",
+		  "The 'S' is for Sucks",
+		  "Styles upon styles.",
+		  "Eat Pray Thug.",
+		  "Too many cooks.",
+		  "Everything is going according to plan.",
+    ];
+
+    // --- 50/50 WEIGHTED SAMPLING LOGIC ---
+    let message = "";
+
+    // 1. Flip a coin (0 or 1)
+    const isOneOff = getRandomInt(2) === 1;
+
+    if (isOneOff) {
+        // 50% chance: Pick a uniform random one-off
+        message = oneOffs[getRandomInt(oneOffs.length)];
+    } else {
+        // 50% chance: Pick uniformly from the constructed sentences
+        const weightA = intros.length * texts.length;
+        const weightAn = Nintros.length * Ntexts.length;
+        const totalConstructedWeight = weightA + weightAn;
+
+        // Roll a number to pick exactly one constructed combination
+        const roll = getRandomInt(totalConstructedWeight);
+
+        if (roll < weightA) {
+            // We landed in Path 0 ("A")
+            const randomIntro = intros[getRandomInt(intros.length)];
+            const randomText = texts[getRandomInt(texts.length)];
+            message = randomIntro + " " + randomText;
+        } else {
+            // We landed in Path 1 ("An")
+            const randomNintro = Nintros[getRandomInt(Nintros.length)];
+            const randomNtext = Ntexts[getRandomInt(Ntexts.length)];
+            message = randomNintro + " " + randomNtext;
+        }
+    }
+
+    document.getElementById('randomIntro').innerText = message;
+    console.log("If you are reading this, you're probably a real sicko.");
+
+    </script>
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Assistant professor @ <a href="https://bicmr.pku.edu.cn/">BICMR</a> within <a href="https://english.pku.edu.cn/"> Peking University</a></h2>
+										</header>
+
+										<p>Measured dynamics, probability, ergodic theory, and all that jazz. If your problem statement involves the words 'invariant random', give me a call.</p>
+			<p> Previously at Jagiellonian University with <a href="https://sites.google.com/view/mikolaj-fraczyk/">Mikolaj Fraczyk</a>, at McGill University working with <a href="https://www.math.mcgill.ca/atserunyan/index.html">Anush Tserunyan</a> and <a href="https://www.math.mcgill.ca/msabok/">Marcin Sabok</a>, and
+							 with <a href="http://perso.ens-lyon.fr/gaboriau/">Damien Gaboriau</a> @ École Normale Supérieure de Lyon.
+<br>
+Former PhD student of <a href="https://users.renyi.hu/~abert/">Miklós Abért</a> at Central European University.
+<br>
+
+<p>Email: samuelmellick[in French they call it <i>arobase</i>]bicmr.pku.edu.cn</p>
+
+									</div>
+									<span class="image"><img src="images/pic01.JPG" alt="Sam Mellick mathematician" /></span>
+								</div>
+							</section>
+						
+						<section id="cta" class="main special">
+								<header class="major">
+									<h2>Papers</h2>
+
+								</header>
+<p>
+	Check <a href="https://scholar.google.com/citations?user=JFRQ1iAAAAAJ&hl=en">Google Scholar</a> for the latest.
+</p>
+<p>							
+<ol reversed>
+<li><b>Unimodular random graphs with Property (T) have cost one</b>, joint with <a href="https://www.math.uni-leipzig.de/~grabowski/">Łukasz Grabowski</a> and <a href="https://sites.google.com/view/jardon-sanchez/">Héctor Jardón-Sánchez</a>. See <a href="https://arxiv.org/abs/2506.19454">arXiv</a> (<i>submitted</i>)</li>
+	
+<li><b>Exactness and the topology of the space of invariant random equivalence relations</b>, joint with <a href="https://sites.google.com/view/jardon-sanchez/">Héctor Jardón-Sánchez</a>, <a href="https://antoinegpoulin.github.io/">Antoine Poulin</a>, and <a href="https://sites.google.com/view/konrad-wrobel/home">Konrad Wrobel</a>. See <a href="https://arxiv.org/abs/2502.11622">arXiv</a> (<i>Proceedings of the London Mathematical Society</i>)</li>
+	
+<li><b>Indistinguishability of cells for the ideal Poisson Voronoi tessellation</b>, solo dolo. See <a href="https://arxiv.org/abs/2408.10009">arXiv</a> (<i>Proceedings of the AMS</i>)</li>
+
+<li><b>Gaboriau's criterion and fixed price one for locally compact groups</b>, solo dolo. See <a href="https://arxiv.org/abs/2307.11728">arXiv</a> (<i>Transactions of the AMS</i>)</li>
+
+<li><b>Poisson-Voronoi tessellations and fixed price in higher rank</b>, joint with <a href="https://sites.google.com/view/mikolaj-fraczyk/"> Mikolaj Fraczyk</a> and <a href="https://www.math.cmu.edu/~awilkens/">Amanda Wilkens</a>. See <a href="https://arxiv.org/abs/2307.01194">arXiv</a>. To appear (<i><a href="https://annals.math.princeton.edu/articles/22425">Annals of Mathematics</a></i>)
+
+<li><b>On the Existence of Balancing Allocations and Factor Point Processes</b>, joint with <a href="https://ipm.ac.ir/personalinfo.jsp?PeopleCode=IP1600070">Ali Khezeli</a>. See <a href="https://arxiv.org/abs/2303.05137">arXiv</a> (<i>ALEA</i>)</li>
+
+<li><b>Point processes, cost, and the growth of rank in locally compact groups</b>, joint with <a href="https://users.renyi.hu/~abert/">Miklós Abért</a>. See <a href="https://arxiv.org/abs/2102.07710">arXiv</a> (<i>Israel Journal of Mathematics</i>).</li>
+
+<li><b>The Palm groupoid of a point process and factor graphs on amenable and Property (T) groups
+</b>, solo dolo. See <a href="https://arxiv.org/abs/2101.07238">arXiv</a> (<i>to appear</i> in a forthcoming survey on the connection between connected Cayley factor graphs and measure equivalence)</li>
+</ol>
+</p>
+
+
+							</section>
+
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Poisson point process notes</h2>
+
+								</header>
+<p>
+I gave some talks in François Le Maître's <a href="https://flemaitre.perso.math.cnrs.fr/gdt/"><b>Groupe de travail de théorie ergodique
+</b></a> on the basics of the Poisson point process. <a href="https://www.overleaf.com/read/rkkwknzbfwhz#7d8e08">Here</a> are some (extremely incomplete, unproofread) lecture notes for it.
+</p>
+							</section>
+
+						<!-- First Section -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>PIEROGY conference</h2>
+
+								</header>
+<p>
+We organised a conference at Jagiellonian University: Perspectives In Ergodic Theory RandOmness and GeometrY (<a href="https://pierogy.matinf.uj.edu.pl/"><b>PIEROGY</b></a>). It took place from the twelfth to the sixteenth of January in 2026. Click the link to find out more!
+</p>
+<p><i>Critically important cultural information</i>: <a href="https://en.wikipedia.org/wiki/Pierogi">Pierogi</a> are a kind of dumpling Poland is famous for.</p>
+							</section>
+						<!-- Second Section -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>IHES mini course</h2>
+								</header>
+<p>
+Recently I cotaught <a href="https://indico.math.cnrs.fr/event/12324/">a minicourse at the IHES</a> on my work around fixed price. You can find the first video <a href="https://youtu.be/7riJsqAkXJU?si=OdquOFsv0Cr-4hiM">here</a> and the (very incomplete!) exercise sheets <a href="https://www.overleaf.com/read/ncmyqkjrqdft#3aaafa">here</a>. Feel free to contact me if you have any questions (particularly about the exercises).
+</p>
+							</section>
+						<!-- Second Section -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Recent talks</h2>
+								</header>
+<p>
+	A lot. What can I say? <a href="https://youtu.be/YqJAnQTwmJs?si=u3pFNM9raQ-xv70_">I get around</a>. IHES, Centre de Recherches Mathématiques, Centre International de Rencontres Mathématiques, Université Paris Cité...
+	<br> Tumbleweed...
+	<br>
+<i>Computing the cost on nondiscrete groups with factors of IID</i> @ UT Austin Groups and Dynamics online seminar (<a href="https://www.youtube.com/watch?v=uYHnaFpDO7k">watch on YouTube</a>)	
+<br><i>Visualising actions, computing cost, and fixed price for G x Z</i> @ “<a href="https://www.math.mcgill.ca/atserunyan/DDC-Seminar/">Descriptive Dynamics and Combinatorics</a>” of McGill University (<a href="DCCmcgillslides.pdf">slides</a>)
+<br><i>The cost of point processes</i>, invited guest @ DYOGENE Project of <a href="https://www.inria.fr/en/dyogene">Centre Inria de Paris</a>.
+<br><i>Point processes on groups, their cost, and fixed price for G x Z</i> @ <a href="https://egg.epfl.ch/seminars.html">Ergodic and Geometric Group Theory</a> of École Polytechnique Fédérale de Lausanne
+</p>
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Teaching</h2>
+									<p> <a href="https://indico.math.cnrs.fr/event/12324/overview">Cost minicourse</a> @ IHES (joint with <a href="https://www.math.cmu.edu/~awilkens/">Amanda Wilkens</a>)
+	<br>Topics in Measured Group Theory @ Jagiellonian University (joint with <a href="https://sites.google.com/view/konrad-wrobel">Konrad Wrobel</a>)
+	<br>
+	<a href="https://www.mcgill.ca/study/2022-2023/courses/math-140">MATH140</a> @ McGill (Calculus 1). Joint with the inimitable <a href="https://www.mcgill.ca/mathstat/sidney-trudeau">Sidney Trudeau</a>
+		</p>
+								</header>
+							</section>
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Wikipedia</h2>
+								</header>
+									<p>I'm a big fan. If you want to simulate a conversation with me, tell your favourite LLM to poorly summarise one of its <a href="https://en.wikipedia.org/wiki/Wikipedia:Unusual_articles">articles considered unusual</a>. I reckon their <a href="https://en.wikipedia.org/wiki/List_of_common_misconceptions">list of common misconceptions</a> should be a mandatory part of the school curriculum, too. </p>
+							</section>
+
+
+						
+					</div>
+
+				<!-- Footer 
+					<footer id="footer">
+						<section>
+							<h2>Aliquam sed mauris</h2>
+							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Etiam feugiat</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd>
+								<dt>Email</dt>
+								<dd><a href="#">information@untitled.tld</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section> -->
+						<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer> 
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
